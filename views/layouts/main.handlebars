@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>My Pill Box</title>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  	<script src="https://use.fontawesome.com/4ea1cb92b3.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/flatly.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+</head>
+<body>
+  <!-- navigaton bar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">My Pill Box</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <button type="button" class="btn btn-secondary">
+          <li class="nav-item active">
+            <a class="nav-link" href="/home">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </button>
+        <button type="button" class="btn btn-secondary">
+          <li class="nav-item">
+            <a class="nav-link" href="/pillbox">My Pill Box</a>
+          </li>
+        </button>
+        <button type="button" class="btn btn-secondary">
+          <li class="nav-item">
+            <a class="nav-link" href="/medlist">Medications</a>
+          </li>
+        </button>
+        <button type="button" class="btn btn-secondary">
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">Sign Up </a>
+          </li>
+        </button>
+      </ul>
+
+      <button type="button" role="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">Log In</button>
+
+      <!-- MODEL / POP-UP  /////// LOG IN -->
+      
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Enter user name and password</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+
+              <!-- LOG IN FORM -->
+
+              <div class="modal-body">
+                <form class="form-inline" id="signin" name="signin" method="post" action="signin">
+                  <label name="email" class="sr-only" for="inlineFormInputGroupUsername2">Email</label><div class="input-group mb-2 mr-sm-2"><input type="text" name="email" class="form-control" id="email" placeholder="Email"></div>
+                  <label name="password" class="sr-only" for="inputPassword3">Password</label><input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                  <div class="form-check mb-2 mr-sm-2"><input class="form-check-input" type="checkbox" id="inlineFormCheck"><label class="form-check-label" for="inlineFormCheck">Remember me</label></div>
+                  <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                </form>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-lg" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <!-- END   /////   MODEL / POP-UP  /////// LOG IN -->
+
+    &nbsp; 
+    
+    <a class="btn btn-secondary" href="/logout" role="button">Log Out</a>
+
+    </div>
+  </nav>
+  <!-- navigaton bar END  -->
+  	{{!-- <div class="container"> --}}
+
+		{{{ body }}}
+
+	{{!-- </div> --}}
+
+	<script src="./js/api.js"></script>
+	</body>
+	<footer>
+	  <hr class="my-4">
+    <div class="panel-footer" align="center"><a href="/about">About Scriptz</a></div>
+  </footer>
+</HTML>

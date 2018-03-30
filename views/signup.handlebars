@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>Sign Up Yo</title>
+</head>
+ 
+<body>
+
+    <form class="well form-horizontal" id="signup" name="signup" method="post" action="/signup">
+      <fieldset>
+        <!-- Main Title -->
+        <div class="jumbotron">
+        <h1 class="display-3">Sign Up</h1>
+        <p class="lead"></p>
+        <hr class="my-4">
+        </div>
+
+         <!-- FIRST NAME -->
+        <div class="form-group">
+          <label class="col-md-4 control-label">First Name</label>
+          <div class="col-md-4  inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-user"></i>
+              </span>
+              <input name="first_name" id="first_name" placeholder="First Name" class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+
+        <!-- LAST NAME -->
+        <div class="form-group">
+          <label class="col-md-4 control-label">Last Name</label>
+          <div class="col-md-4  inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-user"></i>
+              </span>
+              <input name="last_name" id="last_name" placeholder="Last Name" class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+
+         <!-- USERNAME -->
+        <div class="form-group">
+          <label class="col-md-4 control-label">Username</label>
+          <div class="col-md-4  inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-user"></i>
+              </span>
+              <input name="username" id="username" placeholder="Username" class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-group">
+          <label class="col-md-4 control-label">Email</label>
+          <div class="col-md-4  inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-user"></i>
+              </span>
+              <input name="email" id="email" placeholder="Email" class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+
+      </fieldset>
+
+
+      <!-- PASSWORD -->
+      <fieldset>
+           <div class="form-group has-feedback">
+          <label for="password" class="col-md-4 control-label">
+            Password
+          </label>
+          <div class="col-md-4  inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-home"></i>
+              </span>
+              <input class="form-control" id="userPw" type="password" placeholder="password" name="password" data-minLength="3" data-error="some error"
+                required/>
+              <span class="glyphicon form-control-feedback"></span>
+              <span class="help-block with-errors"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group has-feedback">
+          <label for="confirmPassword" class="col-md-4 control-label">
+            Confirm Password
+          </label>
+          <div class="col-md-4  inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-home"></i>
+              </span>
+              <input class="form-control {$borderColor}" id="userPw2" type="password" placeholder="Confirm password" name="confirmPassword"
+                data-match="#confirmPassword" data-minLength="3" data-match-error="some error 2" required/>
+              <span class="glyphicon form-control-feedback"></span>
+              <span class="help-block with-errors"></span>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- SIGN UP BUTTON -->
+        <div class="form-group">
+          <label class="col-md-4 control-label"></label>
+          <div class="col-md-4">
+            <button type="submit" id="1" class="btn btn-warning">SIGN UP<span class="glyphicon glyphicon-send"></span></button>
+          </div>
+        </div>
+
+
+      </fieldset>
+    </form>
+
+
+ 
+</body>
+ 
+</html>

@@ -1,0 +1,53 @@
+div {
+    /*border: 2px solid black;*/
+   /* margin: 10px;*/
+  }
+body {
+    /*background-image: url("../../assets/images/mistymountains.png");  */
+     /* background-image: url("../../images/manypill.jpeg");  */
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron {
+    padding-bottom: 0;    
+}
+
+#addMedicationForms {
+    width: 75%;
+}
+
+#submit {
+  margin-bottom: 2rem;
+}
+
+.containerPillEntry {
+  padding: 100rem;
+}
+
+.medTable {
+  padding: 1rem;
+}
+
+.addMedsContainer {
+  padding: 1rem;
+  width: 50%;
+}
+#submit_addmed {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+.modal-content {
+  padding: 20px;
+}
+
+#medButton {
+  margin-left: 5px;
+}
+
+
+/* css for sign up page  */
+/* https://codepen.io/juff03/pen/OXaXRG */
+#success_message{ display: none;}

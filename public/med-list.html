@@ -1,0 +1,164 @@
+<!-- Med List display  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Medication List</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- link to bootstrap style sheet -->
+  <!-- <link rel="stylesheet" type="text/css" href="./assets/css/minty.css"> -->
+  <link rel="stylesheet" type="text/css" href="/css/flatly.css">
+  <!-- <link rel="stylesheet" type="text/css" href="./assets/css/spacelab.css"> -->
+
+<!-- Local CSS style sheet -->
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+<!-- link to local js  -->
+   <!-- Optional JavaScript -->
+   <!-- JS, Popper.js, and jQuery -->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Nav bar  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">  
+  <a class="navbar-brand" href="#"> My Pill Box</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+        <button type="button" class="btn btn-secondary">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      </button>
+      <button type="button" class="btn btn-secondary">
+      <li class="nav-item">
+        <a class="nav-link" href="pill-box.html">Pill Box</a>
+      </li>
+    </button>
+    <button type="button" class="btn btn-secondary">
+      <li class="nav-item">
+        <a class="nav-link" href="med-list.html">Medication List</a>
+      </li>
+    </button>
+    <button type="button" class="btn btn-secondary">
+      <li class="nav-item">
+        <a class="nav-link" href="sign-up.html">Sign Up </a>
+      </li>
+    </button> 
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Title -->
+<div class="jumbotron">
+  <h1 class="display-3">View &amp; Manage Medications</h1>
+  <p class="lead"></p>
+  <hr class="my-4">
+</div>
+
+<!-- Medication Table -->
+<table class="table table-hover" id="medTable">
+    <thead>
+        <tr>
+          <th scope="col">Medication</th>
+          <th scope="col">Dose</th>
+          <th scope="col">When</th>
+          <th scope="col">Pills Remaning</th>
+          <th scope="col">Deactivate Medication</th>
+        </tr>
+    </thead>
+        <tbody>
+            <tr class="table-secondary">
+              <th scope="row">Lasix</th>
+              <td>10 mg</td>
+              <td>Morning</td>
+              <td>30</td>
+              <td><button>Deactivate</button></td>
+            </tr>
+            <tr class="table-secondary">
+              <th scope="row">Tylenol</th>
+              <td>10 mg</td>
+              <td>Lunch Time</td>
+              <td>30</td>
+              <td><button>Deactivate</button></td>
+            </tr>
+            <tr class="table-secondary">
+              <th scope="row">Advil</th>
+              <td>10 mg</td>
+              <td>Dinner Time</td>
+              <td>30</td>
+              <td><button>Deactivate</button></td>
+            </tr>
+            <tr class="table-secondary">
+              <th scope="row">whatever</th>
+              <td>10 mg</td>
+              <td>Before Bed</td>
+              <td>30</td>
+              <td><button>Deactivate</button></td>
+            </tr>
+        </tbody>
+</table> 
+
+<!-- The pill entry form  -->
+<h3>Add Medications</h3>
+<div class="containerPillEntry">
+<form>
+  <fieldset>
+    <div class="form-group">
+        <label for="medicationName">Medication Name</label>
+        <textarea class="form-control" id="addMedicationForms" rows="1"></textarea>
+    </div>
+
+     <div class="form-group">
+        <label for="dose">Dose</label>
+        <textarea class="form-control" id="addMedicationForms" rows="1"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="whenToTake">When (please select all times for this medication)</label>
+      <select multiple class="form-control" id="addMedicationForms">
+        <option>Morning</option>
+        <option>Lunch Time</option>
+        <option>Dinner Time</option>
+        <option>Bed Time</option>
+      </select>
+    </div>
+   
+                  
+<!-- Submit Button -->
+    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+  </fieldset>
+</form>
+</div> 
+
+<!-- Deactivated Meds -->
+<div class="container-fluid">
+  <div class="card border-secondary mb-3">
+    <div class="card-header"><h4>Deactivated Medication/Medication History</h4></div>
+      <div class="card-body">
+        <p class="card-text"></p>
+      </div>  
+  </div>
+</div>  
+<footer>
+    <br><br><br>
+  <div class="panel-footer" align="center"><a href="/about.html">About Scriptz</a></div>
+</footer>  
+
+<!-- Optional JavaScript -->
+<!-- JS, Popper.js, and jQuery -->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

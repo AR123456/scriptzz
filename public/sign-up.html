@@ -1,0 +1,190 @@
+<!-- Sign in /sigh up page  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Sign Up </title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/flatly.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <!-- link to local js  -->
+  <!-- Optional JavaScript -->
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- navigaton bar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"> My Pill Box</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <button type="button" class="btn btn-secondary">
+          <li class="nav-item active">
+            <a class="nav-link" href="/home">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </button>
+        <button type="button" class="btn btn-secondary">
+          <li class="nav-item">
+            <a class="nav-link" href="/pill-box">Pill Box</a>
+          </li>
+        </button>
+        <button type="button" class="btn btn-secondary">
+          <li class="nav-item">
+            <a class="nav-link" href="/med-list">Medication List</a>
+          </li>
+        </button>
+        <button type="button" class="btn btn-secondary">
+          <li class="nav-item">
+            <a class="nav-link" href="/sign-up">Sign Up </a>
+          </li>
+        </button>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <!-- navigaton bar END  -->
+  
+  <div class="container">
+    <!-- The sign up form from Stack  https://stackoverflow.com/questions/18296267/form-validation-with-bootstrap-jquery -->
+    <!-- http://twitterbootstrap.org/bootstrap-form-validation/ -->
+
+    <form class="well form-horizontal" action=" " method="post" id="reg_form">
+      <fieldset>
+
+        <!-- Form Name -->
+        <legend>
+          <center>
+            <h2>
+              <br>
+              <b>Sign Up For My Pill Box</b>
+            </h2>
+          </center>
+        </legend>
+        <br> </legend>
+        <!-- Text input-->
+        <legend> Account information </legend>
+        <div class="form-group">
+          <label class="col-md-4 control-label">First Name</label>
+          <div class="col-md-4  inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-user"></i>
+              </span>
+              <input id="first_name" name="first_name" placeholder="First Name" class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label">Last Name</label>
+          <div class="col-md-4  inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-user"></i>
+              </span>
+              <input id="last_name" name="last_name" placeholder="Last Name" class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+               <!-- Text area -->
+        <div class="form-group">
+          <label class="col-md-4 control-label">UserName </label>
+          <div class="col-md-4  inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-home"></i>
+              </span>
+              <textarea id="username"class="form-control" name="user_name" placeholder="username "></textarea>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <!-- Text input-->
+           <div class="form-group has-feedback">
+          <label for="password" class="col-md-4 control-label">
+            Password
+          </label>
+          <div class="col-md-4  inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-home"></i>
+              </span>
+              <input class="form-control" id="userPw" type="password" placeholder="password" name="password" data-minLength="5" data-error="some error"
+                required/>
+              <span class="glyphicon form-control-feedback"></span>
+              <span class="help-block with-errors"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group has-feedback">
+          <label for="confirmPassword" class="col-md-4 control-label">
+            Confirm Password
+          </label>
+          <div class="col-md-4  inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-home"></i>
+              </span>
+              <input class="form-control {$borderColor}" id="userPw2" type="password" placeholder="Confirm password" name="confirmPassword"
+                data-match="#confirmPassword" data-minLength="5" data-match-error="some error 2" required/>
+              <span class="glyphicon form-control-feedback"></span>
+              <span class="help-block with-errors"></span>
+            </div>
+          </div>
+        </div>
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label"></label>
+          <div class="col-md-4">
+            <button id="button" type="submit" class="btn btn-warning">Send
+              <span class="glyphicon glyphicon-send"></span>
+            </button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <footer> 
+    <div class="panel-footer" align="center"><a href="/about">About Scriptz</a></div>
+  <br>
+  </footer>
+  <!-- /.container -->
+
+  <!-- Optional JavaScript -->
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap Validator  -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+
+  <!-- local js file  -->
+  <script src="./js/app.js"> </script>
+</body>
+
+</html>
