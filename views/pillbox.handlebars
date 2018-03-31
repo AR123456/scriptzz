@@ -11,7 +11,9 @@
       <div class="card border-secondary mb-3">
       <div class="card-header"><h4>Morning</h4></div>
       <div class="card-body">
-        <p class="card-text">Med: {{#each scriptz}}{{#if active}}<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="{{this.prescription_name}}" id="medButton">{{this.prescription_name}}</button>{{/if}}{{/each}} </p>
+        <p class="card-text">Medication: {{#each scriptz}}{{#if active}}<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="{{this.prescription_name}}" id="medButton">{{this.prescription_name}}</button>{{/if}}{{/each}} </p>
+        {{!-- the taken button needs to decrement pill count on medication page text change from mark taken to taken after click  --}}
+          {{!-- <p>  <button type ="button" class ="btn btn-primary">Mark Taken </button></p> --}}
       </div>  
     </div>
 
@@ -20,7 +22,8 @@
       <div class="card border-secondary mb-3">
       <div class="card-header"><h4>Lunch Time</h4></div>
       <div class="card-body">
-        <p class="card-text">Med: {{#each scriptzLunch}}{{#if active}}<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="{{this.prescription_name}}" id="medButton">{{this.prescription_name}}</button>{{/if}}{{/each}}</p>
+        <p class="card-text">Medication: {{#each scriptzLunch}}{{#if active}}<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="{{this.prescription_name}}" id="medButton">{{this.prescription_name}}</button>{{/if}}{{/each}}</p>
+        <p> <button type ="button" class ="btn btn-primary">Mark Taken </button></p>
       </div>  
     </div>      
 
@@ -34,7 +37,8 @@
       <div class="card border-secondary mb-3">
       <div class="card-header"><h4>Dinner Time</h4></div>
       <div class="card-body">
-        <p class="card-text">Med: {{#each scriptzDinner}}{{#if active}}<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="{{this.prescription_name}}" id="medButton">{{this.prescription_name}}</button>{{/if}}{{/each}}</p>
+        <p class="card-text">Medication{{#each scriptzDinner}}{{#if active}}<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="{{this.prescription_name}}" id="medButton">{{this.prescription_name}}</button>{{/if}}{{/each}}</p>
+      <p> <button type ="button" class ="btn btn-primary">Mark Taken </button></p>
       </div>  
     </div>
 
@@ -43,14 +47,15 @@
       <div class="card border-secondary mb-3">
       <div class="card-header"><h4>Before Bed</h4></div>
       <div class="card-body">
-        <p class="card-text">Med: {{#each scriptzBed}}{{#if active}}<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="{{this.prescription_name}}" id="medButton">{{this.prescription_name}}</button>{{/if}}{{/each}}</p>
+        <p class="card-text">Medication {{#each scriptzBed}}{{#if active}}<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" value="{{this.prescription_name}}" id="medButton">{{this.prescription_name}}</button>{{/if}}{{/each}}</p>
+           <p><button type ="button" class ="btn btn-primary">Mark Taken </button></p>
       </div>  
     </div>      
     </div>
   </div>
 </div>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div id="mymodal" class="modal bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       ...

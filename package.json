@@ -1,7 +1,7 @@
 {
   "name": "scriptzz",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "Updated Scriptz App",
   "main": "server.js",
   "directories": {
     "test": "test"
@@ -14,11 +14,8 @@
     "type": "git",
     "url": ""
   },
-  "author": "",
+  "author": "Anne Rottler",
   "license": "ISC",
-  "bugs": {
-    "url": ""
-  },
   "homepage": "",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -36,5 +33,8 @@
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "sequelize": "^4.37.4"
-  }
+  },
+  "keywords": [
+    "Pill"
+  ]
 }

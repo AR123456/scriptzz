@@ -1,6 +1,12 @@
-$(document).on("click", "#medButton", function(event){
 
-    event.preventDefault
+$(document).on("mouseleave", ".modal-content", function(event){
+  console.log('mouseleave medbutton');
+  
+  $("#mymodal").modal("hide");
+});
+$(document).on("mouseover", "#medButton", function(event){
+console.log('#medButton clicked');
+$("#mymodal").modal("show");
     var search = $(this).val().trim()
     console.log(search)
         $.ajax({
